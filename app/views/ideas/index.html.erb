@@ -15,8 +15,8 @@
   <tbody>
     <% @ideas.each do |idea| %>
       <tr>
-        <td><%= idea.name %></td>
-        <td><%= idea.description %></td>
+        <td><%= naughty_filter(idea.name) %></td>
+        <td><%= naughty_filter(idea.description) %></td>
         <td><%= idea.picture %></td>
         <td><%= link_to 'Show', idea %></td>
         <td><%= link_to 'Edit', edit_idea_path(idea) %></td>
